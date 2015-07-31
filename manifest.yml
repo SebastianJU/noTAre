@@ -1,10 +1,9 @@
-declared-services:
-  redis-chatter:
-    label: rediscloud
-    plan:  25mb
+---
 applications:
-- name: bluechatter
+- name: notare
   memory: 128M
-  command: node app.js
+  path: .
+  host: notare
+  domain: mybluemix.net
   services:
   - redis-chatter
