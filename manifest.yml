@@ -1,0 +1,10 @@
+declared-services:
+  redis-chatter:
+    label: rediscloud
+    plan:  25mb
+applications:
+- name: bluechatter
+  memory: 128M
+  command: node app.js
+  services:
+  - redis-chatter
